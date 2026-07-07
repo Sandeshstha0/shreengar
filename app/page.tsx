@@ -4,6 +4,7 @@ import Footer from "./components/Footer/Footer";
 import Gallery from "./components/Gallery/Gallery";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar/Navbar";
+
 import Pricing from "./components/Pricing/Pricing";
 import Services from "./components/services/services";
 import Testimonials from "./components/Testimonials/Testimonials";

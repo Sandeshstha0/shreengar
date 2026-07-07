@@ -8,16 +8,7 @@ export default function Loader() {
     <motion.div
       initial={{ opacity: 1 }}
       animate={{ opacity: 1 }}
-      exit={{
-        opacity: 0,
-        scale: 1.08,
-        filter: "blur(10px)",
-      }}
-      transition={{
-        duration: 1.3,
-        ease: "easeInOut",
-      }}
-      className="fixed inset-0 z-9999 flex items-center justify-center overflow-hidden bg-linear-to-br from-pink-50 via-white to-rose-50"
+      className="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden bg-gradient-to-br from-pink-50 via-white to-rose-50"
     >
       {/* Background Glow */}
 

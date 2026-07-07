@@ -46,6 +46,3 @@
 html {
   scroll-behavior: smooth;
 }
-html {
-  scrollbar-gutter: stable;
-}
