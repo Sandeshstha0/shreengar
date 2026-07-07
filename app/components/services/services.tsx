@@ -4,7 +4,7 @@ import ServiceCard from "./serviceCard";
 const services = [
   {
     title: "Bridal Makeup",
-    image: "/services/bridal.jpg",
+    image: "/services/brideal.jpg",
     description:
       "Elegant bridal makeup designed to make your wedding day unforgettable.",
   },
@@ -16,7 +16,7 @@ const services = [
   },
   {
     title: "Engagement Makeup",
-    image: "/services/engagement.jpg",
+    image: "/services/hero1.jpg",
     description:
       "Soft and radiant makeup that complements your engagement style.",
   },

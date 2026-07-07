@@ -12,7 +12,7 @@ import {
 
 export default function ContactInfo() {
   return (
-    <div className="rounded-[32px] bg-white p-10 shadow-lg">
+    <div className="rounded-4xl bg-white p-10 shadow-lg">
       <p className="uppercase tracking-[0.35em] text-pink-500">
         Contact Information
       </p>
@@ -61,7 +61,7 @@ export default function ContactInfo() {
           <div>
             <h3 className="font-semibold text-gray-900">Studio Address</h3>
             <p className="mt-1 text-gray-600">
-              Pokhara, Nepal
+              Damauli, Nepal
             </p>
           </div>
         </div>

@@ -42,3 +42,10 @@
 .wave {
   animation: waveMove 8s ease-in-out infinite;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+html {
+  scrollbar-gutter: stable;
+}

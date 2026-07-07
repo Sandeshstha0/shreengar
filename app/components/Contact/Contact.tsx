@@ -9,7 +9,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-gradient-to-b from-pink-50 to-white py-28"
+      className="relative overflow-hidden bg-linear-to-b from-pink-50 to-white py-28"
     >
       {/* Decorative Background */}
 

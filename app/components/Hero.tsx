@@ -1,6 +1,7 @@
 import HeroStats from "./HeroStats";
 import { ArrowRight } from "lucide-react";
 import { Playfair_Display, Great_Vibes } from "next/font/google";
+import Image from "next/image";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -13,9 +14,9 @@ const greatVibes = Great_Vibes({
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden">
+    <section id='home' className="relative min-h-screen overflow-hidden">
       {/* Background Video */}
-      <video
+      {/* <video
         autoPlay
         muted
         loop
@@ -23,10 +24,17 @@ export default function Hero() {
         className="absolute inset-0 h-full w-full object-cover scale-110 animate-[slowZoom_20s_linear_infinite]"
       >
         <source src="/hero.mp4" type="video/mp4" />
-      </video>
+      </video> */}
+      <Image
+  src="/hero1.jpg"
+  alt="Shreengar hero background"
+  fill
+  priority
+  className="object-cover scale-110 animate-[slowZoom_20s_linear_infinite]"
+/>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/35 to-black/10" />
+      <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/35 to-black/10" />
 
       {/* Content */}
       <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-6 sm:px-8 lg:px-10">
