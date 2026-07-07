@@ -82,6 +82,7 @@ export default function Navbar() {
           className="text-3xl font-bold text-pink-500"
         >
           Shringar
+          
         </Link>
 
         {/* Desktop Navigation */}

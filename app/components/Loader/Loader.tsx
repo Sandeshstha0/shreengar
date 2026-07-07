@@ -1,14 +1,37 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
+import Image from "next/image";
+import { Playfair_Display } from "next/font/google";
+import { Great_Vibes } from "next/font/google";
+
+const greatVibes = Great_Vibes({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["700"],
+});
 
 export default function Loader() {
   return (
     <motion.div
       initial={{ opacity: 1 }}
       animate={{ opacity: 1 }}
-      className="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden bg-gradient-to-br from-pink-50 via-white to-rose-50"
+      exit={{
+        opacity: 0,
+        scale: 1.08,
+        filter: "blur(10px)",
+      }}
+      transition={{
+        duration: 0.8,
+        ease: "easeInOut",
+      }}
+      className="fixed inset-0 z-9999 flex items-center justify-center overflow-hidden bg-linear-to-br from-pink-50 via-white to-rose-50"
     >
       {/* Background Glow */}
 
@@ -47,19 +70,39 @@ export default function Loader() {
       {/* Content */}
 
       <div className="relative z-10 text-center">
-        <motion.h1
-          initial={{ scale: 0.8, opacity: 0 }}
+        <motion.div
           animate={{
-            scale: 1,
-            opacity: 1,
+            y: [0, -8, 0],
           }}
           transition={{
-            duration: 0.8,
+            repeat: Infinity,
+            duration: 2,
+            ease: "easeInOut",
           }}
-          className="text-6xl font-bold tracking-wide text-pink-500"
         >
-          Shreengar
-        </motion.h1>
+          
+          <Image
+            src="/logo.jpg"
+            alt="Shringar Makeup Studio"
+            width={100}
+            height={100}
+            priority
+            className="mx-auto rounded-full shadow-xl"
+          />
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              delay: 0.3,
+            }}
+           className={`${greatVibes.className} mt-6 text-5xl text-pink-500`}
+          >
+            Shreengar
+          </motion.h1>
+        </motion.div>
 
         <motion.p
           initial={{ opacity: 0, y: 10 }}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import PageLoader from "./components/Loader/PageLoader";
+import Cursor from "./components/Cursor/Cursor";
 
 
 const geistSans = Geist({
@@ -29,7 +30,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col"><PageLoader>{children} </PageLoader></body>
+      <body className="min-h-full flex flex-col">   <Cursor /><PageLoader>{children} </PageLoader></body>
     </html>
   );
 }

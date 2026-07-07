@@ -2,6 +2,7 @@ import HeroStats from "./HeroStats";
 import { ArrowRight } from "lucide-react";
 import { Playfair_Display, Great_Vibes } from "next/font/google";
 import Image from "next/image";
+import Magnetic from "./ui/Magnetic";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -14,7 +15,7 @@ const greatVibes = Great_Vibes({
 
 export default function Hero() {
   return (
-    <section id='home' className="relative min-h-screen overflow-hidden">
+    <section id="home" className="relative min-h-screen overflow-hidden">
       {/* Background Video */}
       {/* <video
         autoPlay
@@ -26,12 +27,12 @@ export default function Hero() {
         <source src="/hero.mp4" type="video/mp4" />
       </video> */}
       <Image
-  src="/hero1.jpg"
-  alt="Shreengar hero background"
-  fill
-  priority
-  className="object-cover scale-110 animate-[slowZoom_20s_linear_infinite]"
-/>
+        src="/hero1.jpg"
+        alt="Shreengar hero background"
+        fill
+        priority
+        className="object-cover scale-110 animate-[slowZoom_20s_linear_infinite]"
+      />
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/35 to-black/10" />
@@ -81,17 +82,20 @@ export default function Hero() {
 
           {/* Buttons */}
           <div className="mt-4 flex flex-col gap-4 sm:flex-row">
-            <button className="group flex items-center justify-center gap-2 rounded-full bg-pink-300 px-8 py-4 font-semibold text-white transition hover:bg-pink-400">
-              Book Appointment
-              <ArrowRight
-                size={18}
-                className="transition group-hover:translate-x-1"
-              />
-            </button>
-
-            <button className="rounded-full border border-white px-8 py-4 font-semibold text-white transition hover:bg-white hover:text-black">
-              View Gallery
-            </button>
+            <Magnetic>
+              <button className="group flex items-center justify-center gap-2 rounded-full bg-pink-300 px-8 py-4 font-semibold text-white transition hover:bg-pink-400">
+                Book Appointment
+                <ArrowRight
+                  size={18}
+                  className="transition group-hover:translate-x-1"
+                />
+              </button>
+            </Magnetic>
+            <Magnetic>
+              <button className="rounded-full border border-white px-8 py-4 font-semibold text-white transition hover:bg-white hover:text-black">
+                View Gallery
+              </button>
+            </Magnetic>
           </div>
 
           {/* Stats */}

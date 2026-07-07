@@ -33,16 +33,16 @@
 }
 
 
-@keyframes waveMove {
-  0% { transform: translateX(0); }
-  50% { transform: translateX(-20px); }
-  100% { transform: translateX(0); }
-}
 
-.wave {
-  animation: waveMove 8s ease-in-out infinite;
-}
+
+
 
 html {
   scroll-behavior: smooth;
+}
+
+@media (pointer: fine) {
+  * {
+    cursor: none;
+  }
 }
