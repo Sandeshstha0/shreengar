@@ -28,7 +28,7 @@ export default function Footer() {
 
           <div>
             <h2 className="text-3xl font-bold text-white">
-              Shringar
+              Shreengar
             </h2>
 
             <p className="mt-5 leading-8 text-gray-400">

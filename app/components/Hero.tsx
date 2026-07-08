@@ -1,8 +1,10 @@
+"use client";
 import HeroStats from "./HeroStats";
 import { ArrowRight } from "lucide-react";
 import { Playfair_Display, Great_Vibes } from "next/font/google";
 import Image from "next/image";
 import Magnetic from "./ui/Magnetic";
+import { scrollToSection } from "@/lib/scrollToSection";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -83,7 +85,9 @@ export default function Hero() {
           {/* Buttons */}
           <div className="mt-4 flex flex-col gap-4 sm:flex-row">
             <Magnetic>
-              <button className="group flex items-center justify-center gap-2 rounded-full bg-pink-300 px-8 py-4 font-semibold text-white transition hover:bg-pink-400">
+              <button 
+               onClick={() => scrollToSection("contact")}
+              className="group flex items-center justify-center gap-2 rounded-full bg-pink-300 px-8 py-4 font-semibold text-white transition hover:bg-pink-400">
                 Book Appointment
                 <ArrowRight
                   size={18}
@@ -92,7 +96,9 @@ export default function Hero() {
               </button>
             </Magnetic>
             <Magnetic>
-              <button className="rounded-full border border-white px-8 py-4 font-semibold text-white transition hover:bg-white hover:text-black">
+              <button 
+               onClick={() => scrollToSection("gallery")}
+              className="rounded-full border border-white px-8 py-4 font-semibold text-white transition hover:bg-white hover:text-black">
                 View Gallery
               </button>
             </Magnetic>
