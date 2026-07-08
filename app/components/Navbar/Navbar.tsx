@@ -9,8 +9,6 @@ import Image from "next/image";
 
 import { Playfair_Display } from "next/font/google";
 
-
-
 const playfair = Playfair_Display({
   subsets: ["latin"],
   weight: ["700"],
@@ -88,18 +86,17 @@ export default function Navbar() {
 
         <Link
           href="#home"
-          className="text-3xl font-bold text-pink-500 flex items-center gap-2"
+          className="flex items-center gap-1 sm:gap-2 text-xl sm:text-2xl md:text-3xl font-bold text-pink-500"
         >
           <Image
             src="/logo.png"
             alt="Shringar Logo"
             width={150}
             height={50}
-            className="h-14 w-auto object-contain rounded-full"
+            className="h-9 w-auto sm:h-11 md:h-14 object-contain rounded-full"
             priority
           />
-          <h1   className={`${playfair.className}    ` }>Shreengar</h1>
-          
+          <h1 className={playfair.className}>Shreengar</h1>
         </Link>
 
         {/* Desktop Navigation */}
