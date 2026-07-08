@@ -3,9 +3,18 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-
 import NavLinks from "./NavLinks";
 import MobileMenu from "./MobileMenu";
+import Image from "next/image";
+
+import { Playfair_Display } from "next/font/google";
+
+
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["700"],
+});
 
 const sections = [
   "home",
@@ -49,7 +58,7 @@ export default function Navbar() {
         root: null,
         rootMargin: "-40% 0px -50% 0px",
         threshold: 0,
-      }
+      },
     );
 
     sections.forEach((id) => {
@@ -79,9 +88,17 @@ export default function Navbar() {
 
         <Link
           href="#home"
-          className="text-3xl font-bold text-pink-500"
+          className="text-3xl font-bold text-pink-500 flex items-center gap-2"
         >
-          Shringar
+          <Image
+            src="/logo.png"
+            alt="Shringar Logo"
+            width={150}
+            height={50}
+            className="h-14 w-auto object-contain rounded-full"
+            priority
+          />
+          <h1   className={`${playfair.className}    ` }>Shreengar</h1>
           
         </Link>
 

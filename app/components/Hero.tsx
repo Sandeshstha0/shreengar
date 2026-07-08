@@ -27,7 +27,7 @@ export default function Hero() {
         <source src="/hero.mp4" type="video/mp4" />
       </video> */}
       <Image
-        src="/hero1.jpg"
+        src="/hero1.avif"
         alt="Shreengar hero background"
         fill
         priority

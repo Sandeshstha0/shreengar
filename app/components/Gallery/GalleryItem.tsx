@@ -28,12 +28,13 @@ export default function GalleryItem({
         duration: 0.3,
       }}
       onClick={onClick}
-      className={`group relative cursor-pointer overflow-hidden rounded-[32px] ${height}`}
+      className={`group relative cursor-pointer overflow-hidden rounded-4xl ${height}`}
     >
       {/* Image */}
       <Image
         src={image}
         alt={title}
+        loading="lazy"
         fill
         className="object-cover transition-transform duration-700 group-hover:scale-110"
       />

@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import PageLoader from "./components/Loader/PageLoader";
 import Cursor from "./components/Cursor/Cursor";
+import LocalBusinessSchema from "./components/SEO/LocalBusinessSchema";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -79,38 +80,23 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Shreengar Makeup Studio | Bridal & Professional Makeup in Nepal",
-
     description:
-      "Professional bridal makeup, engagement makeup, reception makeup, party makeup and beauty services in Nepal.",
-
+      "Professional bridal, engagement, reception and party makeup services in Nepal.",
     url: "https://www.shreengar.com.np",
-
     siteName: "Shreengar Makeup Studio",
-
-    locale: "en_US",
-
     type: "website",
-
     images: [
       {
-        url: "/logo.jpg",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
         alt: "Shreengar Makeup Studio",
       },
     ],
   },
-
   twitter: {
     card: "summary_large_image",
-
-    title: "Shreengar Makeup Studio",
-
-    description: "Luxury bridal makeup and beauty services in Nepal.",
-
-    images: ["/logo.jpg"],
-
-    creator: "@yourusername", // Remove if you don't have X
+    images: ["/opengraph-image"],
   },
 
   manifest: "/site.webmanifest",
@@ -127,6 +113,8 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+          <LocalBusinessSchema url="https://www.shreengar.com.np" />
+
         {" "}
         <Cursor />
         <PageLoader>{children} </PageLoader>
